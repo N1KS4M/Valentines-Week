@@ -7,6 +7,9 @@ const config = {
     // Your Name / Recipient Name
     recipientName: "Anu🌸",
 
+    // Year Adjustment
+    year: 2026,
+
     // Background Icons (Floating)
     floatingIcons: [
         'assets/heart.svg',

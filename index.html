@@ -1436,7 +1436,7 @@
             document.getElementById('quoteText').innerHTML = day.quote;
             document.getElementById('recipientName').textContent = `— ${config.recipientName}`;
             document.getElementById('dayMessage').textContent = day.message;
-            document.getElementById('footerText').textContent = `Happy ${day.title} • ${day.date}, 2026`;
+            document.getElementById('footerText').textContent = `Happy ${day.title} • ${day.date}, ${config.year || 2026}`;
 
             // Stage 4: Memories - Dynamic Injection
             const stage4 = document.getElementById('stage4');
@@ -1622,7 +1622,7 @@
             dayBadge.textContent = `${day.date} • ${day.title}`;
             quoteText.innerHTML = day.quote;
             recipientName.textContent = `— ${config.recipientName}`;
-            footerText.textContent = `Happy ${day.title} • ${day.date}, 2026`;
+            footerText.textContent = `Happy ${day.title} • ${day.date}, ${config.year || 2026}`;
 
             // Update icons (use multiple if available)
             const icons = day.icons || [day.icon, day.icon, day.icon];
