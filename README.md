@@ -83,7 +83,7 @@ If you want to edit on your computer:
 
 ## ❤️ Credits
 
-- Animations & Original Concept: **Deon_07** / **Afiur Rahman Fahim (faahim)**
+- Animations & Original Concept: **Deon_07**
 - Customization & Enhancements: [Your Name]
 
 Stay happy and spread love! :)
