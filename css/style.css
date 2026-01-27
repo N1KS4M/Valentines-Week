@@ -1774,3 +1774,20 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(211, 47, 47, 0.3);
 }
+
+@media (max-width: 768px) {
+
+    /* Countdown Timer Mobile Adjustments */
+    .countdown-box {
+        padding: 5px 10px;
+        min-width: 50px;
+    }
+
+    .countdown-num {
+        font-size: 1.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.6rem;
+    }
+}
