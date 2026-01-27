@@ -12,18 +12,32 @@ const config = {
 
     // Background Icons (Floating)
     floatingIcons: [
-        'assets/heart.svg',
-        'assets/balloon.svg',
-        'assets/happy.svg'
+        'assets/svgs/heart.svg',
+        'assets/svgs/balloon.svg',
+        'assets/svgs/happy.svg',
+        'assets/svgs/rose.svg',
+        'assets/svgs/cupid-arrow.svg',
+        'assets/svgs/double-hearts.svg',
+        'assets/svgs/love-letter.svg',
+        'assets/svgs/ring.svg',
+        'assets/svgs/white-flower.svg',
+        'assets/svgs/cherry-blossom.svg',
+        'assets/svgs/sakura-petal.svg',
+        'assets/svgs/sakura-branch.svg'
     ],
 
-    // Music Playlist (Randomly selected    )
+    // Default music for outside Valentine's Week (before Feb 7 or after Feb 14)
+    defaultMusic: "assets/music/default-bg.mp3",
+
+    // Music Playlist (fallback if day-specific music is not set)
     musicList: [
-        "assets/music.mp3",
-        "assets/music_2.mp3",
-        "assets/music_3.mp3",
-        "assets/music_4.mp3",
-        "assets/music_5.mp3"
+        "assets/music/rose-day.mp3",
+        "assets/music/hug-day.mp3",
+        "assets/music/chocolate-day.mp3",
+        "assets/music/teddy-day.mp3",
+        "assets/music/promise-day.mp3",
+        "assets/music/propose-day.mp3",
+        "assets/music/kiss-day.mp3"
     ],
 
     // Day-by-Day Configuration
@@ -40,7 +54,7 @@ const config = {
             themeColor: "#ff007f",
             bgStart: "#FFF9FB", bgMid: "#FCE4EC", bgEnd: "#F8BBD0",
             petalSymbols: ["🌹", "❤️", "💕", "🌸", "🥀", "💐"],
-            music: "assets/music.mp3",
+            music: "assets/music/rose-day.mp3",
             memories: [
                 "That's what I was going to send...",
                 "But then I stopped.",
@@ -66,7 +80,7 @@ const config = {
             themeColor: "#ff4d4d",
             bgStart: "#FFF5F5", bgMid: "#FFE4E4", bgEnd: "#FFD0D0",
             petalSymbols: ["💍", "💎", "💖", "✨", "⭐", "🌟"],
-            music: "assets/music_6.mp3",
+            music: "assets/music/propose-day.mp3",
             memories: [
                 "I've thought about this moment...",
                 "A thousand times in my head.",
@@ -91,7 +105,7 @@ const config = {
             themeColor: "#8b4513",
             bgStart: "#FFF8F0", bgMid: "#FFE8D0", bgEnd: "#F5D0A9",
             petalSymbols: ["🍫", "🍬", "🤎", "🧁", "🍰", "🍪"],
-            music: "assets/music_3.mp3",
+            music: "assets/music/chocolate-day.mp3",
             memories: [
                 "Life can be bitter sometimes...",
                 "But then there's you.",
@@ -115,7 +129,7 @@ const config = {
             themeColor: "#e0ac69",
             bgStart: "#FFFAF0", bgMid: "#FFE8CC", bgEnd: "#FFD9B3",
             petalSymbols: ["🧸", "🤍", "💛", "🎀", "🌻", "🍯"],
-            music: "assets/music_4.mp3",
+            music: "assets/music/teddy-day.mp3",
             memories: [
                 "Sometimes I wish I was a teddy...",
                 "So I could be with you always.",
@@ -139,7 +153,7 @@ const config = {
             themeColor: "#9932cc",
             bgStart: "#FAF0FF", bgMid: "#E8D0FF", bgEnd: "#D8B0F0",
             petalSymbols: ["🤞", "💜", "🔮", "🌟", "⚡", "🦋"],
-            music: "assets/music_5.mp3",
+            music: "assets/music/promise-day.mp3",
             memories: [
                 "They say promises are meant to be broken...",
                 "But not mine.",
@@ -163,6 +177,7 @@ const config = {
             themeColor: "#ff69b4",
             bgStart: "#FFF0F8", bgMid: "#FFD8EC", bgEnd: "#FFC0E0",
             petalSymbols: ["🤗", "💗", "🌷", "💝", "🌸", "💞"],
+            music: "assets/music/hug-day.mp3",
             memories: [
                 "There is magic in a hug.",
                 "It heals everything.",
@@ -188,6 +203,7 @@ const config = {
             themeColor: "#ff0000",
             bgStart: "#FFF0F0", bgMid: "#FFD0D0", bgEnd: "#FFB0B0",
             petalSymbols: ["💋", "❤️", "💄", "😘", "🌹", "💕"],
+            music: "assets/music/kiss-day.mp3",
             memories: [
                 "A kiss is not just a touch...",
                 "Remember Dec 3?",
@@ -214,19 +230,27 @@ const config = {
             themeColor: "#ff0040",
             bgStart: "#FFF0F5", bgMid: "#FFD0E0", bgEnd: "#FFB0C8",
             petalSymbols: ["❤️", "💘", "💕", "💗", "💖", "🌹", "🎉", "✨", "🎆"],
+            music: "assets/music/valentine-day.mp3",       // Valentine's Day - Special!
             memories: [
-                "We've walked through this week...",
-                "Each day a step closer.",
-                "Closer to us.",
-                "Every day with you is a <strong>celebration</strong>.",
-                "You are my Rose.",
-                "My Proposal.",
-                "My Sweetness.",
-                "My Comfort, Promise, and Home.",
-                "You are my <span class='emphasis'>Everything</span>.",
-                "Here's to a lifetime of us. 🥂",
-                "Happy Valentine's Day! ❤️"
-            ]
+                "We've walked through this week together...",
+                "7 days of love. 7 promises kept.",
+                "From roses to chocolates...",
+                "From hugs to kisses...",
+                "Every moment leading to <strong>this</strong>.",
+                "You're not just my Valentine...",
+                "You're my <span class='emphasis'>forever person</span>.",
+                "My best friend. My soulmate.",
+                "I choose you. Today. Tomorrow. <strong>Always</strong>.",
+                "So here's my heart... 💝",
+                "Will you keep it safe?",
+                "Happy Valentine's Day, my love! ❤️"
+            ],
+            letter: `My Dearest Anu,<br><br>
+            They say seven days make a week, but these seven days with you have felt like a lifetime of happiness packed into moments. <br><br>
+            From the first rose I wished to give you, to the promise I made to stand by you forever—every step has only deepened my certainty: <b>You are the one.</b><br><br>
+            You are my laughter in happiness, my comfort in silence, and my strength in chaos. I don't just want you for a Valentine's Day; I want you for every single day that follows.<br><br>
+            Thank you for being my peace and my home. I love you more than words can say.<br><br>
+            Forever yours,<br>Dip`
         }
     ]
 };
