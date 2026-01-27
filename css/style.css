@@ -1389,34 +1389,56 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     border-radius: 30px;
-    padding: 50px 60px;
+    padding: 60px 40px;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(224, 172, 105, 0.3);
+    box-shadow: 0 25px 70px rgba(224, 172, 105, 0.4);
     max-width: 500px;
     width: 90%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .gift-box {
-    font-size: 8rem;
+    font-size: 9rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-block;
-    animation: giftShake 0.5s ease-in-out infinite;
+    animation: giftShake 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
 }
 
 .gift-box:hover {
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
 }
 
 @keyframes giftShake {
 
     0%,
     100% {
-        transform: rotate(-3deg);
+        transform: rotate(0deg);
     }
 
-    50% {
-        transform: rotate(3deg);
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: rotate(-5deg);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate(5deg);
+    }
+
+    90% {
+        transform: rotate(0deg);
     }
 }
 
@@ -1425,12 +1447,16 @@ body {
 }
 
 .teddy-reveal {
+    display: none;
     opacity: 0;
-    transform: scale(0);
-    transition: all 0.5s ease;
+    transform: scale(0.5);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex-direction: column;
+    align-items: center;
 }
 
 .teddy-reveal.show {
+    display: flex;
     opacity: 1;
     transform: scale(1);
 }
@@ -1439,7 +1465,8 @@ body {
     font-size: 10rem;
     display: block;
     margin-bottom: 20px;
-    animation: teddyBounce 1s ease-in-out infinite;
+    animation: teddyBounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(224, 172, 105, 0.4));
 }
 
 @keyframes teddyBounce {
