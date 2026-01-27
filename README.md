@@ -83,7 +83,9 @@ By default, the site is set to **date-locked mode** where users can only see the
 
 To switch to **testing mode** (view all days freely):
 
-1. Open `index.html`.
+To switch to **testing mode** (view all days freely):
+
+1. Open `js/main.js`.
 2. Find the line:
 
    ```javascript
